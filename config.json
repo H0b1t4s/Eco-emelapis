@@ -1,7 +1,158 @@
 {
   "kabinetai": [
+    { "id": "maisto-pamoka", "kabinetas": 101 },
     { "id": 1, "kabinetas": 101 },
     { "id": 2, "kabinetas": 202 },
-    { "id": 3, "kabinetas": 303 }
-  ]
+    { "id": 3, "kabinetas": 101 },
+    { "id": 4, "kabinetas": 202 },
+    { "id": 5, "kabinetas": 101 },
+    { "id": 6, "kabinetas": 202 },
+    { "id": 7, "kabinetas": 101 },
+    { "id": 8, "kabinetas": 202 },
+    { "id": 9, "kabinetas": 101 },
+    { "id": 10, "kabinetas": 202 },
+    { "id": 11, "kabinetas": 101 },
+    { "id": 12, "kabinetas": 202 },
+    { "id": 13, "kabinetas": 101 },
+    { "id": 14, "kabinetas": 202 },
+    { "id": 15, "kabinetas": 101 },
+    { "id": 16, "kabinetas": 202 },
+    { "id": 17, "kabinetas": 101 },
+    { "id": 18, "kabinetas": 202 },
+    { "id": 19, "kabinetas": 108 },
+    { "id": 20, "kabinetas": 107 },
+    { "id": 21, "kabinetas": 106 },
+    { "id": 22, "kabinetas": 105 },
+    { "id": 23, "kabinetas": 104 },
+    { "id": 24, "kabinetas": 103 },
+    { "id": 25, "kabinetas": 102 },
+    { "id": 26, "kabinetas": 101 },
+    { "id": 27, "kabinetas": 101 },
+    { "id": 28, "kabinetas": 202 },
+    { "id": 29, "kabinetas": 101 },
+    { "id": 30, "kabinetas": 202 },
+    { "id": 31, "id_kabinetas": 101 },
+    { "id": 32, "kabinetas": 202 },
+    { "id": 33, "kabinetas": 101 },
+    { "id": 34, "kabinetas": 202 },
+    { "id": 35, "kabinetas": 101 },
+    { "id": 36, "kabinetas": 202 },
+    { "id": 37, "kabinetas": 101 },
+    { "id": 38, "kabinetas": 202 },
+    { "id": 39, "kabinetas": 101 },
+    { "id": 40, "kabinetas": 202 },
+    { "id": 41, "kabinetas": 101 },
+    { "id": 42, "kabinetas": 202 },
+    { "id": 43, "kabinetas": 101 },
+    { "id": 44, "kabinetas": 202 },
+    { "id": 45, "kabinetas": 101 },
+    { "id": 46, "kabinetas": 202 },
+    { "id": 47, "kabinetas": 101 },
+    { "id": 48, "kabinetas": 202 },
+    { "id": 49, "kabinetas": 101 },
+    { "id": 50, "kabinetas": 202 },
+    { "id": 51, "kabinetas": 101 },
+    { "id": 52, "kabinetas": 202 },
+    { "id": 53, "kabinetas": 101 },
+    { "id": 54, "kabinetas": 202 },
+    { "id": 55, "kabinetas": 101 },
+    { "id": 56, "kabinetas": 202 },
+    { "id": 57, "kabinetas": 101 },
+    { "id": 58, "kabinetas": 202 },
+    { "id": 59, "kabinetas": 101 },
+    { "id": 60, "kabinetas": 202 },
+    { "id": 61, "kabinetas": 101 },
+    { "id": 62, "kabinetas": 202 },
+    { "id": 63, "kabinetas": 101 },
+    { "id": 64, "kabinetas": 202 },
+    { "id": 65, "kabinetas": 101 },
+    { "id": 66, "kabinetas": 202 },
+    { "id": 67, "kabinetas": 101 },
+    { "id": 68, "kabinetas": 202 },
+    { "id": 69, "kabinetas": 101 },
+    { "id": 70, "kabinetas": 202 },
+    { "id": 71, "kabinetas": 101 },
+    { "id": 72, "kabinetas": 101 },
+    { "id": 73, "kabinetas": 202 },
+    { "id": 74, "kabinetas": 101 },
+    { "id": 75, "kabinetas": 202 },
+    { "id": 76, "kabinetas": 101 }
+  ],
+  "info": {
+    "1": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "2": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "3": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "4": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "5": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "6": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "7": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "8": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "9": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "10": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "11": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "12": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "13": {
+      "pareigos": "Administracija",
+      "vardas_pavarde": "Jonas Jonaitis",
+      "del_ko_kreiptis": "Dokumentų klausimai"
+    },
+    "14": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    },
+    "15": {
+      "pareigos": "Direktorius",
+      "vardas_pavarde": "Petras Petrauskas",
+      "del_ko_kreiptis": "Sutikimai, įsakymai"
+    }
+  }
 }
