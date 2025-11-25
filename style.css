@@ -9,6 +9,103 @@
     color: rgb(119, 119, 119);
 }
 
+.saraso-container {
+    width: 300px;
+    display: block;
+    height: 561.1px;
+    z-index: 101;
+    position: absolute;
+    background: #cecdcc;
+    left: -300px;
+    top: 0;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.saraso-container h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+.search-input {
+    width: 254px;
+    padding: 8px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-left: 15px;
+}
+
+.search-list {
+    width: 298px;
+    max-height: 470px;
+    overflow-y: auto;
+    background: #cecdcc;
+    border-top: 0.5px solid #aaaaaa;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 10px;
+}
+
+.search-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-item:hover {
+    background: #e6e6e6;
+}
+
+
+
+
+
+
+
+
+
+
+.iejimas1, .iejimas2{
+    position: absolute;
+}
+
+.iejimas1{
+    margin-top: 380px;
+    margin-left: 444px;
+}
+
+.iejimas1 span{
+    position: absolute;
+}
+
+.iejimas1 p{
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: -25px;
+}
+
+.iejimas2{
+    margin-top: 200px;
+    margin-left: 457px;
+}
+
+.iejimas2 span{
+    position: absolute;
+    top: 55px;
+}
+
+.iejimas2 p{
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: -15px;
+}
+
 .mokyklos-planas-container {
     width: 100%;
     display: flex;
@@ -19,10 +116,10 @@
     left: 50%;
     transform: translate(-50%, -50%); /* Tiksliai centruoja */
 
+
 }
 
 .mokyklos-planas{
-    background-color: aqua;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -41,7 +138,7 @@
 .antras-aukstas{
     width: 730.3px;
     height: 561.1px;
-    background: rgb(206, 205, 204);
+    background: #cecdcc;
     position: relative;
     z-index: 1;
 }
@@ -67,18 +164,22 @@
 
 .info-container {
     width: 300px;
-    height: 620px;
-    background: antiquewhite;
+    height: 561.1px;
+    background: #c9c9c9;
     border-radius: 5px;
     display: flex;
     position: absolute;
-    top: 100px;
     z-index: 100;
+    top: 0;
 }
 
 .info{
     margin: 10px 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info h2{
+    text-align: center;
 }
 
 .mygtuku-container{
@@ -948,6 +1049,10 @@
     margin-left: 677.9px;
 }
 
+.kabinetas73{
+    width: 10px;
+    height: 10px;
+}
 .kabinetas74{
     width: 47.1px;
     height: 24.7px;
