@@ -1,13 +1,25 @@
-.kabinetas{
-    font-size: 15px;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: start;
-    align-items: end;
-    display: flex;
-    color: rgb(119, 119, 119);
+#infoDelKo {
+  white-space: pre-line;
 }
+
+
+body{
+user-select: none;
+
+}
+
+.kabinetas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
+    overflow: visible;
+    pointer-events: auto;
+    font-size: 12px;
+}
+
 
 .saraso-container {
     width: 300px;
@@ -60,14 +72,10 @@
     background: #e6e6e6;
 }
 
-
-
-
-
-
-
-
-
+.vardas{
+    color: #3b3b3b;
+    font-size: 15px;
+}
 
 .iejimas1, .iejimas2{
     position: absolute;
@@ -163,7 +171,7 @@
 }
 
 .info-container {
-    width: 300px;
+    width: 400px;
     height: 561.1px;
     background: #c9c9c9;
     border-radius: 5px;
@@ -171,6 +179,7 @@
     position: absolute;
     z-index: 100;
     top: 0;
+    font-size: 14px;
 }
 
 .info{
@@ -222,7 +231,7 @@
 }
 
 .SS, .SSMPK, .SSBPK, .SSPK, .V, .foje, .maisto-pamoka, .aktu-sale,
-  .tuoletas1,   .tuoletas2,   .tuoletas3,   .tuoletas4,   .tuoletas5,   .tuoletas6,   .tuoletas7,   .tuoletas8,   .tuoletas9,  .tuoletas10, .tuoletas11, .tuoletas12,
+  .tuoletasM1,   .tuoletasM2, .tuoletasMN1, .tuoletasN3,   .tuoletasV4,   .tuoletasV5, .tuoletasVN5,   .tuoletasM6,   .tuoletas7,   .tuoletasV8,   .tuoletas9,  .tuoletasM10, .tuoletasMN10, .tuoletasM11, .tuoletasV12,
  .kabinetas1,  .kabinetas2,  .kabinetas3,  .kabinetas4,  .kabinetas5,  .kabinetas6,  .kabinetas7,  .kabinetas8,  .kabinetas9, .kabinetas10,
 .kabinetas11, .kabinetas12, .kabinetas13, .kabinetas14, .kabinetas15, .kabinetas16, .kabinetas17, .kabinetas18, .kabinetas19, .kabinetas20,
 .kabinetas21, .kabinetas22, .kabinetas23, .kabinetas24, .kabinetas25, .kabinetas26, .kabinetas27, .kabinetas28, .kabinetas29, .kabinetas30, 
@@ -230,7 +239,7 @@
 .kabinetas41, .kabinetas42, .kabinetas43, .kabinetas44, .kabinetas45, .kabinetas46, .kabinetas47, .kabinetas48, .kabinetas49, .kabinetas50, 
 .kabinetas51, .kabinetas52, .kabinetas53, .kabinetas54, .kabinetas55, .kabinetas56, .kabinetas57, .kabinetas58, .kabinetas59, .kabinetas60,
 .kabinetas61, .kabinetas62, .kabinetas63, .kabinetas64, .kabinetas65, .kabinetas66, .kabinetas67, .kabinetas68, .kabinetas69, .kabinetas70,
-.kabinetas71, .kabinetas72, .kabinetas73, .kabinetas74, .kabinetas75, .kabinetas76{
+.kabinetas71, .kabinetas72, .kabinetas73, .kabinetas74, .kabinetas75, .kabinetas76, .kabinetas28a, .kabinetas29a, .kabinetas30a, .kabinetas51a{
     background-color: rgb(226, 196, 176);
     position: absolute;
     transition: ease-in 0.2s;
@@ -248,9 +257,19 @@
 .kabinetas41:hover, .kabinetas42:hover, .kabinetas43:hover, .kabinetas44:hover, .kabinetas45:hover, .kabinetas46:hover, .kabinetas47:hover, .kabinetas48:hover, .kabinetas49:hover, .kabinetas50:hover, 
 .kabinetas51:hover, .kabinetas52:hover, .kabinetas53:hover, .kabinetas54:hover, .kabinetas55:hover, .kabinetas56:hover, .kabinetas57:hover, .kabinetas58:hover, .kabinetas59:hover, .kabinetas60:hover,
 .kabinetas61:hover, .kabinetas62:hover, .kabinetas63:hover, .kabinetas64:hover, .kabinetas65:hover, .kabinetas66:hover, .kabinetas67:hover, .kabinetas68:hover, .kabinetas69:hover, .kabinetas70:hover,
-.kabinetas71:hover, .kabinetas72:hover, .kabinetas73:hover, .kabinetas74:hover, .kabinetas75:hover, .kabinetas76:hover{
+.kabinetas71:hover, .kabinetas72:hover, .kabinetas73:hover, .kabinetas74:hover, .kabinetas75:hover, .kabinetas76:hover, .kabinetas28a:hover, .kabinetas29a:hover, .kabinetas51a:hover{
     background-color: rgb(192, 168, 152);
     transition: ease-in 0.2s;
+}
+
+.tuoletasM1,   .tuoletasM2, .tuoletasMN1, .tuoletasN3,   .tuoletasV4,   .tuoletasV5, .tuoletasVN5,   .tuoletasM6,   .tuoletas7,   .tuoletasV8,   .tuoletas9,  .tuoletasM10, .tuoletasMN10, .tuoletasM11, .tuoletasV12{
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
 }
 
 .sienos{
@@ -294,7 +313,7 @@
 .SS{
     width: 730.3px;
     height: 561.1px;
-    z-index: 10;
+    z-index: 1;
     clip-path: polygon(
     195.7px 4.3px,
     195.7px 289.7px,
@@ -304,14 +323,30 @@
     362.9px 51.5px,
     338.6px 51.5px,
     338.6px 4.3px
+    
 );
 
+position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.SS span{
+    margin-top: -10px;
+    margin-left: -100px;
 }
 
 .SSMPK{
     width: 730.3px;
     height: 561.1px;
     z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
     clip-path: polygon(
     195.7px 294.6px,
     195.7px 325.6px,
@@ -323,10 +358,20 @@
 
 }
 
+.SSMPK span{
+    margin-top: 60px;
+    margin-left: -250px;
+}
+
 .SSBPK{
     width: 730.3px;
     height: 561.1px;
     z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
     clip-path: polygon(
         195.7px 327.4px,
         195.7px 359.3px,
@@ -340,10 +385,20 @@
 
 }
 
+.SSBPK span{
+    margin-top: 130px;
+    margin-left: -250px;
+}
+
 .SSPK{
     width: 730.3px;
     height: 561.1px;
     z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
     clip-path: polygon(
         278.7px 294.6px,
         278.7px 323.2px,
@@ -357,9 +412,20 @@
 
 }
 
+.SSPK span{
+    margin-top: 50px;
+    margin-left: -140px;
+}
+
 .aktu-sale{
     width: 730.3px;
     height: 561.1px;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
     clip-path: polygon(
         341.2px 246.6px,
         341.2px 27.6px,
@@ -368,8 +434,14 @@
         362.8px 242.4px,
         362.8px 246.6px
         );
-        z-index: 10;
 }
+
+.aktu-sale span{
+    margin-top: -125px;
+    margin-left: 0px;
+}
+
+
 
 .V{
     width: 730.3px;
@@ -404,42 +476,59 @@
     margin-left: 4.3px;
 }
 
-.tuoletas1{
+.tuoletasM1{
     width: 49px;
     height: 28.6px;
     margin-bottom: 71.2px;
     margin-left: 52.4px;
 }
 
-.tuoletas2{
+.tuoletasM2{
     width: 32.7px;
     height: 22.4px;
     margin-bottom: 407.5px;
     margin-left: 629px;
 }
 
-.tuoletas3{
+.tuoletasMN1{
+    width: 17.6px;
+    height: 17.6px;
+    margin-bottom: 70.2px;
+    margin-left: 51.4px;
+    border: 1.8px solid rgb(255, 242, 240);
+
+}
+
+.tuoletasN3{
     width: 15.6px;
     height: 21.1px;
     margin-bottom: 385.2px;
     margin-left: 629px;
 }
 
-.tuoletas4{
+.tuoletasV4{
     width: 15.4px;
     height: 20.8px;
     margin-bottom: 385.2px;
     margin-left: 646.1px;
 }
 
-.tuoletas5{
+.tuoletasV5{
     width: 48.5px;
     height: 28.6px;
     margin-bottom: 71.2px;
     margin-left: 53px;
 }
 
-.tuoletas6{
+.tuoletasVN5{
+    width: 17.6px;
+    height: 17.6px;
+    margin-bottom: 70.2px;
+    margin-left: 51.4px;
+    border: 1.8px solid rgb(255, 242, 240);
+}
+
+.tuoletasM6{
     width: 32.7px;
     height: 22.4px;
     margin-bottom: 407.5px;
@@ -453,7 +542,7 @@
     margin-left: 628.9px;
 }
 
-.tuoletas8{
+.tuoletasV8{
     width: 17.5px;
     height: 21.1px;
     margin-bottom: 385.2px;
@@ -467,168 +556,176 @@
     margin-left: 293.2px;
 }
 
-.tuoletas10{
+.tuoletasM10{
     width: 48.7px;
     height: 28.6px;
     margin-bottom: 71.2px;
     margin-left: 53.1px;
 }
 
-.tuoletas11{
+.tuoletasMN10{
+    width: 17.6px;
+    height: 17.6px;
+    margin-bottom: 70.5px;
+    margin-left: 51.7px;
+    border: 1.8px solid rgb(255, 242, 240);
+}
+
+.tuoletasM11{
     width: 32.2px;
     height: 21.9px;
     margin-bottom: 408.1px;
     margin-left: 629.4px;
 }
 
-.tuoletas12{
+.tuoletasV12{
     width: 32.2px;
     height: 21px;
-    margin-bottom: 384.5px;
+    margin-bottom: 386.5px;
     margin-left: 629.4px;
 }
 
-.kabinetas1{
+.kabinetas26{
     width: 48.9px;
     height: 45.1px;
     margin-bottom: 101.1px;
     margin-left: 52.4px;
 }
 
-.kabinetas2{
+.kabinetas25{
     width: 38.5px;
     height: 23.1px;
     margin-bottom: 147.9px;
     margin-left: 62.7px;
 }
 
-.kabinetas3{
+.kabinetas24{
     width: 38.5px;
     height: 22.1px;
     margin-bottom: 171.9px;
     margin-left: 62.7px;
 }
 
-.kabinetas4{
+.kabinetas23{
     width: 47.9px;
     height: 95px;
     margin-bottom: 195.6px;
     margin-left: 53.2px;
 }
 
-.kabinetas5{
+.kabinetas22{
     width: 46.4px;
     height: 95px;
     margin-bottom: 195.6px;
     margin-left: 4.3px;
 }
 
-.kabinetas6{
+.kabinetas21{
     width: 32.8px;
     height: 45.8px;
     margin-bottom: 148.1px;
     margin-left: 4.3px;
 }
 
-.kabinetas7{
+.kabinetas20{
     width: 32.8px;
     height: 45.8px;
     margin-bottom: 100.7px;
     margin-left: 4.3px;
 }
 
-.kabinetas8{
+.kabinetas19{
     width: 32.8px;
     height: 44.6px;
     margin-left: 4.3px;
     margin-bottom: 54.3px;
 }
 
-.kabinetas9{
+.kabinetas18{
     width: 70.1px;
     height: 48.5px;
     margin-bottom: 4.3px;
     margin-left: 152.8px;
 }
 
-.kabinetas10{
+.kabinetas17{
     width: 68.7px;
     height: 48.5px;
     margin-bottom: 4.3px;
     margin-left: 224.7px;
 }
 
-.kabinetas11{
+.kabinetas16{
     width: 94.8px;
     height: 48.9px;
     margin-bottom: 4.3px;
     margin-left: 295.2px;
 }
 
-.kabinetas12{
+.kabinetas15{
     width: 30.7px;
     height: 21.6px;
     margin-bottom: 54.4px;
     margin-left: 359.2px;
 }
 
-.kabinetas13{
+.kabinetas14{
     width: 30.7px;
     height: 22.3px;
     margin-bottom: 77.2px;
     margin-left: 359.2px;
 }
 
-.kabinetas14{
+.kabinetas13{
     width: 30.7px;
     height: 45.7px;
     margin-bottom: 100.6px;
     margin-left: 359.2px;
 }
 
-.kabinetas15{
+.kabinetas12{
     width: 30.7px;
     height: 46.7px;
     margin-bottom: 147.5px;
     margin-left: 359.2px;
 }
 
-.kabinetas16{
+.kabinetas11{
     width: 22.2px;
     height: 48.5px;
     margin-bottom: 194.3px;
     margin-left: 484.6px;
 }
 
-.kabinetas17{
+.kabinetas10{
     width: 22.2px;
     height: 48.5px;
     margin-bottom: 194.3px;
     margin-left: 508.2px;
 }
 
-.kabinetas18{
+.kabinetas9{
     width: 11.7px;
     height: 22.4px;
     margin-bottom: 220.5px;
     margin-left: 531.8px;
 }
 
-.kabinetas19{
+.kabinetas8{
     width: 22px;
     height: 25.3px;
     margin-bottom: 194.3px;
     margin-left: 531.8px;
 }
 
-.kabinetas20{
+.kabinetas7{
     width: 24.3px;
     height: 48.5px;
     margin-bottom: 194.3px;
     margin-left: 555.2px;
 }
 
-.kabinetas21{
+.kabinetas6{
     right: 0;
     width: 22.8px;
     height: 47px;
@@ -636,7 +733,7 @@
     margin-right: 76.8px;
 }
 
-.kabinetas22{
+.kabinetas5{
     right: 0;
     width: 70.6px;
     height: 47px;
@@ -644,7 +741,7 @@
     margin-right: 4.3px;
 }
 
-.kabinetas23{
+.kabinetas4{
     right: 0;
     width: 48.3px;
     height: 68.4px;
@@ -652,7 +749,7 @@
     margin-right: 4.3px;
 }
 
-.kabinetas24{
+.kabinetas3{
     right: 0;
     width: 48.3px;
     height: 68.4px;
@@ -660,7 +757,7 @@
     margin-right: 4.3px;
 }
 
-.kabinetas25{
+.kabinetas2{
     right: 0;
     width: 48.3px;
     height: 44.8px;
@@ -668,7 +765,7 @@
     margin-right: 4.3px;
 }
 
-.kabinetas26{
+.kabinetas1{
     right: 0;
     width: 97.2px;
     height: 46px;
@@ -724,26 +821,42 @@
 
 .kabinetas28{
     width: 48.5px;
-    height: 118.4px;
-    margin-bottom: 171.6px;
+    height: 94.1px;
+    margin-bottom: 196.1px;
     margin-left: 53px;
 }
 
+.kabinetas28a{
+    width: 38.5px;
+    height: 21.8px;
+    margin-bottom: 171.6px;
+    margin-left: 63.1px;
+}
+
 .kabinetas29{
-    width: 730.3px;
-    height: 561.1px;
-    clip-path: polygon(
-        4.3px 484.1px,
-        4.3px 270.7px,
-        51.2px 270.7px,
-        51.2px 365px,
-        36.7px 365px,
-        36.7px 484.1px
-    );
+    width: 47.1px;
+    height: 94.1px;
+    margin-bottom: 196.1px;
+    margin-left: 4.3px;
+
+}
+
+.kabinetas29a{
+    width: 32.3px;
+    height: 116px;
+    margin-bottom: 77px;
+    margin-left: 4.3px;
 }
 
 .kabinetas30{
-    width: 96.6px;
+    width: 70.6px;
+    height: 47.2px;
+    margin-bottom: 4.3px;
+    margin-left: 30.3px;
+}
+
+.kabinetas30a{
+    width: 24.1px;
     height: 47.2px;
     margin-bottom: 4.3px;
     margin-left: 4.3px;
@@ -755,6 +868,7 @@
     margin-bottom: 4.3px;
     margin-left: 152.9px;
 }
+
 
 .kabinetas32{
     width: 68.6px;
@@ -800,7 +914,7 @@
 
 .kabinetas38{
     width: 93.9px;
-    height: 72.7px;
+    height: 48.1px;
     margin-bottom: 194px;
     margin-left: 485.5px;
 }
@@ -857,6 +971,11 @@
 .kabinetas46{
     width: 730.3px;
     height: 561.1px;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    overflow: visible;
     clip-path: polygon(
         628.9px 128.8px,
         628.9px 82.8px,
@@ -865,6 +984,10 @@
         675.7px 106.3px,
         675.7px 128.8px
     );
+}
+.kabinetas46 span{   
+    margin-top: 100px;
+    margin-right: 60px;
 }
 
 .kabinetas47{
@@ -896,10 +1019,17 @@
 }
 
 .kabinetas51{
-    width: 48.2px;
-    height: 117.9px;
-    margin-bottom: 172.4px;
+    width: 47.8px;
+    height: 94px;
+    margin-bottom: 196px;
     margin-left: 53.4px;
+}
+
+.kabinetas51a{
+    width: 38.1px;
+    height: 22.5px;
+    margin-bottom: 172.5px;
+    margin-left: 63.5px;
 }
 
 .kabinetas52{
@@ -976,7 +1106,7 @@
     width: 30.5px;
     height: 44.4px;
     margin-bottom: 101.4px;
-    margin-left: 3600px;
+    margin-left: 360px;
 }
 
 .kabinetas63{
@@ -1050,9 +1180,28 @@
 }
 
 .kabinetas73{
-    width: 10px;
-    height: 10px;
+    width: 730.3px;
+    height: 561.1px;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    overflow: visible;
+    clip-path: polygon(
+        628.9px 128.8px,
+        628.9px 82.8px,
+        726px 82.8px,
+        726px 106.3px,
+        675.7px 106.3px,
+        675.7px 128.8px
+    );
 }
+
+.kabinetas73 span{   
+    margin-top: 100px;
+    margin-right: 60px;
+}
+
 .kabinetas74{
     width: 47.1px;
     height: 24.7px;
@@ -1073,8 +1222,6 @@
     margin-bottom: 77px;
     margin-left: 293.3px;
 }
-
-
 .sienos2{
     width: 730.3px;
     height: 561.1px;
