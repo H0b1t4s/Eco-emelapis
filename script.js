@@ -27,130 +27,155 @@ fetch("config.json")
 
     // -------- 1) Kabinetų numeriai ant plano --------
     cfg.kabinetai.forEach(k => {
-      const el = document.getElementById(k.id);
-      if (el) el.textContent = k.kabinetas;
+
+        // Bandome rasti elementą pagal ID (čia bus SPAN polygon kabinetuose)
+        let el = document.getElementById(k.id);
+
+        if (el) {
+            el.textContent = k.kabinetas; // įrašome kabineto numerį į SPAN arba DIV
+            return;
+        }
+
+        // Jei ID nerastas → polygon kabinetas su klase .kabinetas<ID>
+        el = document.querySelector(".kabinetas" + k.id);
+        if (el) {
+            const span = el.querySelector("span[id]");
+            if (span) span.textContent = k.kabinetas;
+        }
     });
 
 
     // -------- 2) Paspaudus ant kabineto plane --------
     document.querySelectorAll(".kabinetas").forEach(kab => {
-  kab.addEventListener("click", () => {
-    const id = kab.id;
+      kab.addEventListener("click", () => {
 
-    // Teisingai surandame žmogų pagal ID
-    const info = cfg.info.find(i => String(i.id) === String(id));
+        let id = kab.id; // Jei kabinetas turi ID ant DIV
 
-    document.getElementById("infoKabinetas").textContent = kab.textContent;
-    document.getElementById("infoPareigos").textContent = info?.pareigos || "—";
-    document.getElementById("infoVardas").textContent = info?.vardas_pavarde || "—";
+        // Jei ID nėra ant DIV → polygon kabinetas → ID yra SPAN viduje
+        if (!id) {
+          const span = kab.querySelector("span[id]");
+          if (span) id = span.id;
+        }
 
-    // Jei masyvas — sujungiame į tekstą
-    document.getElementById("infoDelKo").textContent = info?.del_ko_kreiptis?.join("\n") || "—";
+        if (!id) return; // Jei vis dar nėra ID — išeiname
 
-    document.getElementById("info").style.display = "block";
-  });
-});
+        // Randame info pagal ID
+        const info = cfg.info.find(i => String(i.id) === String(id));
 
+        // Kabineto numeris iš teksto
+        const kabPavad =
+            kab.textContent.trim() ||
+            document.getElementById(id)?.textContent.trim();
 
+        // Rodome info panelėje
+        document.getElementById("infoKabinetas").textContent = kabPavad || " ";
+        document.getElementById("infoPareigos").textContent = info?.pareigos || " ";
+        document.getElementById("infoVardas").textContent = info?.vardas_pavarde || " ";
+        document.getElementById("infoDelKo").textContent =
+            info?.del_ko_kreiptis?.join("\n") || " ";
 
-   // ====================== 3) SEARCH SISTEMA ======================
+        document.getElementById("info").style.display = "block";
 
-const search = document.getElementById("search");
-const searchList = document.getElementById("search-list");
-
-// pavertimas info į masyvą
-const people = Object.keys(cfg.info).map(id => ({
-    id: id,
-    ...cfg.info[id]
-}));
-
-// -------- Rodyti VISĄ sąrašą --------
-function renderFullList() {
-    searchList.innerHTML = "";
-
-    people.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "search-item";
-
-        div.innerHTML = `
-            <div class="pareigos">${p.pareigos}</div>
-            <div class="vardas">${p.vardas_pavarde}</div>
-        `;
-
-        div.onclick = () => {
-            pickPerson(p.id);
-            search.value = p.vardas_pavarde;
-        };
-
-        searchList.appendChild(div);
+        highlightKabinetas(id);
+      });
     });
-}
 
-renderFullList();
 
-// -------- Filtravimas --------
-search.addEventListener("input", () => {
-    const q = search.value.toLowerCase();
 
-    if (!q.trim()) {
-        renderFullList();
-        return;
+    // ====================== 3) SEARCH SISTEMA ======================
+    const search = document.getElementById("search");
+    const searchList = document.getElementById("search-list");
+
+    // pavertimas info į masyvą
+    const people = Object.keys(cfg.info).map(id => ({
+        id: id,
+        ...cfg.info[id]
+    }));
+
+    // -------- Rodyti VISĄ sąrašą --------
+    function renderFullList() {
+        searchList.innerHTML = "";
+
+        people.forEach(p => {
+            const div = document.createElement("div");
+            div.className = "search-item";
+
+            div.innerHTML = `
+                <div class="pareigos">${p.pareigos}</div>
+                <div class="vardas">${p.vardas_pavarde}</div>
+            `;
+
+            div.onclick = () => {
+                pickPerson(p.id);
+                search.value = p.vardas_pavarde;
+            };
+
+            searchList.appendChild(div);
+        });
     }
 
-    const filtered = people.filter(p =>
-        p.vardas_pavarde.toLowerCase().includes(q) ||
-        p.pareigos.toLowerCase().includes(q)
-    );
+    renderFullList();
 
-    searchList.innerHTML = "";
+    // -------- Filtravimas --------
+    search.addEventListener("input", () => {
+        const q = search.value.toLowerCase();
 
-    filtered.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "search-item";
+        if (!q.trim()) {
+            renderFullList();
+            return;
+        }
 
-        div.innerHTML = `
-            <div class="pareigos">${p.pareigos}</div>
-            <div class="vardas">${p.vardas_pavarde}</div>
-        `;
+        const filtered = people.filter(p =>
+            p.vardas_pavarde.toLowerCase().includes(q) ||
+            p.pareigos.toLowerCase().includes(q)
+        );
 
-        div.onclick = () => {
-            pickPerson(p.id);
-            search.value = p.vardas_pavarde;
-        };
+        searchList.innerHTML = "";
 
-        searchList.appendChild(div);
+        filtered.forEach(p => {
+            const div = document.createElement("div");
+            div.className = "search-item";
+
+            div.innerHTML = `
+                <div class="pareigos">${p.pareigos}</div>
+                <div class="vardas">${p.vardas_pavarde}</div>
+            `;
+
+            div.onclick = () => {
+                pickPerson(p.id);
+                search.value = p.vardas_pavarde;
+            };
+
+            searchList.appendChild(div);
+        });
     });
-});
 
 
     // ======================= 4) Pasirinkus žmogų iš sąrašo =======================
     function pickPerson(id) {
-    const kab = cfg.kabinetai.find(k => String(k.id) === String(id));
-    const info = cfg.info.find(i => String(i.id) === String(id));
+        const kab = cfg.kabinetai.find(k => String(k.id) === String(id));
+        const info = cfg.info.find(i => String(i.id) === String(id));
 
-    if (!info) {
-        alert("Tokio žmogaus informacijos nėra.");
-        return;
+        if (!info) {
+            alert("Tokio žmogaus informacijos nėra.");
+            return;
+        }
+
+        if (!kab) {
+            alert("Šiam žmogui nepriskirtas kabinetas.");
+            return;
+        }
+
+        // Užpildyti info panelę
+        document.getElementById("infoKabinetas").textContent = kab.kabinetas;
+        document.getElementById("infoPareigos").textContent = info.pareigos;
+        document.getElementById("infoVardas").textContent = info.vardas_pavarde;
+        document.getElementById("infoDelKo").textContent = info.del_ko_kreiptis.join("\n");
+
+        document.getElementById("info").style.display = "block";
+
+        highlightKabinetas(kab.id);
     }
-
-    if (!kab) {
-        alert("Šiam žmogui nepriskirtas kabinetas.");
-        return;
-    }
-
-    // Užpildyti info panelę
-    document.getElementById("infoKabinetas").textContent = kab.kabinetas;
-    document.getElementById("infoPareigos").textContent = info.pareigos;
-    document.getElementById("infoVardas").textContent = info.vardas_pavarde;
-    document.getElementById("infoDelKo").textContent =info.del_ko_kreiptis.join("\n");
-
-
-    document.getElementById("info").style.display = "block";
-
-    highlightKabinetas(kab.id);
-}
-
-
 
 
     // ======================= 5) Pažymėti kabinetą + perjungti aukštą =======================
@@ -161,20 +186,21 @@ search.addEventListener("input", () => {
             k.classList.remove("active-kabinetas")
         );
 
-        const el = document.getElementById(id);
+        const el = document.getElementById(id) || document.querySelector(".kabinetas" + id);
         if (!el) return;
 
         // uždėti highlight
         el.classList.add("active-kabinetas");
 
         // surasti aukštą
-        let aukstas = el.closest(".pirmas-aukstas") ? "pirmas-aukstas" :
-                      el.closest(".antras-aukstas") ? "antras-aukstas" :
-                      "trecias-aukstas";
+        let aukstas =
+            el.closest(".pirmas-aukstas") ? "pirmas-aukstas" :
+            el.closest(".antras-aukstas") ? "antras-aukstas" :
+            "trecias-aukstas";
 
         // perjungti aukštą
         aukstai.forEach(a => a.style.display = "none");
         document.querySelector("." + aukstas).style.display = "block";
     }
 
-});
+}); // fetch end
