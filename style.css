@@ -1,11 +1,90 @@
+body{
+user-select: none;
+
+}
+
 #infoDelKo {
   white-space: pre-line;
 }
 
+.lift-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(165, 165, 165);
+    margin-left: 361px;
+    height: 20px;
+    width: 15px;
+    z-index: 10;
+    margin-top: 346px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: #3b3b3b;
+}
 
-body{
-user-select: none;
+.lift-container span{
+    transform: scale(0.8);
+}
 
+.laiptai1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(165, 165, 165);
+    margin-left: 102px;
+    margin-bottom: 25px;
+    height: 25px;
+    width: 50px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: #3b3b3b;
+}
+
+.laiptai2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(165, 165, 165);
+    margin-left: 293px;
+    margin-bottom: 197px;
+    height: 44px;
+    width: 44px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: #3b3b3b;
+}
+
+.laiptai3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(165, 165, 165);
+    margin-right: 105px;
+    margin-bottom: 215px;
+    height: 25px;
+    width: 41px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: #3b3b3b;
+}
+
+.lift-container span{
+    transform: scale(0.8);
+}
+
+
+.span{
+    width: 100%;
+    height: auto;
+    z-index: 10000;
+    position: relative;
 }
 
 .kabinetas {
@@ -61,6 +140,32 @@ user-select: none;
     border-right: none;
     margin-top: 10px;
 }
+
+.search-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scroll bar fonas */
+.search-list::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Scroll rankena */
+.search-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Hover efektas */
+.search-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
 
 .search-item {
     padding: 8px;
@@ -183,8 +288,34 @@ user-select: none;
 }
 
 .info{
-    margin: 10px 5px;
+    margin: 10px 5px 20px 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scroll{
+    overflow-y: auto;
+    height: 480px;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Scroll bar fonas */
+.scroll::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Scroll rankena */
+.scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Hover efektas */
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .info h2{
@@ -335,7 +466,7 @@ position: absolute;
 
 .SS span{
     margin-top: -10px;
-    margin-left: -100px;
+    margin-left: -150px;
 }
 
 .SSMPK{
@@ -437,8 +568,8 @@ position: absolute;
 }
 
 .aktu-sale span{
-    margin-top: -125px;
-    margin-left: 0px;
+    margin-top: -100px;
+    margin-left: 5px;
 }
 
 
@@ -459,6 +590,11 @@ position: absolute;
         364.5px 99.8px,
         342.0px 99.8px
     );
+
+}
+
+.V span{
+    margin-left: 20px;
 
 }
 
@@ -1222,6 +1358,9 @@ position: absolute;
     margin-bottom: 77px;
     margin-left: 293.3px;
 }
+
+
+
 .sienos2{
     width: 730.3px;
     height: 561.1px;
