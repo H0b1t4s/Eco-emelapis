@@ -85,12 +85,27 @@ fetch("config.json")
     // ====================== 3) SEARCH SISTEMA ======================
     const search = document.getElementById("search");
     const searchList = document.getElementById("search-list");
+    
 
     // pavertimas info į masyvą
-    const people = Object.keys(cfg.info).map(id => ({
-        id: id,
-        ...cfg.info[id]
-    }));
+const people = Object.keys(cfg.info).map(id => ({
+    id: id,
+    ...cfg.info[id]
+})).sort((a, b) => {
+
+    const hasNameA = a.vardas_pavarde && a.vardas_pavarde.trim() !== "";
+    const hasNameB = b.vardas_pavarde && b.vardas_pavarde.trim() !== "";
+
+    // jei A neturi vardo → apačion
+    if (!hasNameA && hasNameB) return 1;
+
+    // jei B neturi vardo → A aukščiau
+    if (hasNameA && !hasNameB) return -1;
+
+    // jei abu turi / neturi vardus → rikiuoti abėcėline tvarka
+    return (a.vardas_pavarde || "").localeCompare(b.vardas_pavarde || "");
+});
+
 
     // -------- Rodyti VISĄ sąrašą --------
     function renderFullList() {
@@ -181,26 +196,59 @@ fetch("config.json")
     // ======================= 5) Pažymėti kabinetą + perjungti aukštą =======================
     function highlightKabinetas(id) {
 
-        // nuimti seną highlight
-        document.querySelectorAll(".kabinetas").forEach(k =>
-            k.classList.remove("active-kabinetas")
-        );
+    lastKabId = id; // ← ČIA ĮDEDAM !!!
 
-        const el = document.getElementById(id) || document.querySelector(".kabinetas" + id);
-        if (!el) return;
+    // nuimti seną highlight
+    document.querySelectorAll(".kabinetas").forEach(k =>
+        k.classList.remove("active-kabinetas")
+    );
 
-        // uždėti highlight
-        el.classList.add("active-kabinetas");
+    const el = document.getElementById(id) || document.querySelector(".kabinetas" + id);
+    if (!el) return;
 
-        // surasti aukštą
-        let aukstas =
-            el.closest(".pirmas-aukstas") ? "pirmas-aukstas" :
-            el.closest(".antras-aukstas") ? "antras-aukstas" :
-            "trecias-aukstas";
+    // uždėti highlight
+    el.classList.add("active-kabinetas");
 
-        // perjungti aukštą
-        aukstai.forEach(a => a.style.display = "none");
-        document.querySelector("." + aukstas).style.display = "block";
-    }
+    // surasti aukštą
+    let aukstas =
+        el.closest(".pirmas-aukstas") ? "pirmas-aukstas" :
+        el.closest(".antras-aukstas") ? "antras-aukstas" :
+        "trecias-aukstas";
+
+    // perjungti aukštą
+    aukstai.forEach(a => a.style.display = "none");
+    document.querySelector("." + aukstas).style.display = "block";
+}
+
 
 }); // fetch end
+
+document.querySelector(".speaker").addEventListener("click", () => {
+
+    if (!lastKabId) {
+        alert("Pirmiausia pasirink kabinetą plane arba iš sąrašo.");
+        return;
+    }
+
+    const audio = document.getElementById("audioPlayer");
+    const newSrc = `audio/${lastKabId}.m4a`;
+
+    // jei paspausta antrą kartą ir tas pats garsas – toggle play/pause
+    if (audio.src.includes(newSrc)) {
+        if (!audio.paused) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        return;
+    }
+
+    // jei kitas kabinetas – kraunam naują garsą
+    audio.src = newSrc;
+    audio.play().catch(() => {
+        alert("Šiam kabinetui garsas nepridėtas.");
+    });
+
+});
+
+

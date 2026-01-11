@@ -87,14 +87,20 @@
   "info": [
     {
       "id": "1",
-      "pareigos": "Buhalterija; Archyvas; Viešųjų pirkimų specialistas",
-      "vardas_pavarde": "Mokyklos Administracija",
+      "pareigos": "Buhalterija; archyvas; viešųjų pirkimų specialistas",
+      "vardas_pavarde": "Gimnazijos administracija",
+      "del_ko_kreiptis": []
+    },
+    {
+      "id": "budetojas",
+      "pareigos": "",
+      "vardas_pavarde": "Budetojas",
       "del_ko_kreiptis": []
     },
     {
       "id": "2",
       "pareigos": "Anglų kalbos kabinetas",
-      "vardas_pavarde": "R. Kairelytė",
+      "vardas_pavarde": "R. Kairelytė-Milaknienė",
       "del_ko_kreiptis": []
     },
     {
@@ -111,7 +117,7 @@
     },
     {
       "id": "5",
-      "pareigos": "Metodinis, Direktoriaus pavaduotoja ugdymui",
+      "pareigos": "Metodinis, direktoriaus pavaduotoja ugdymui",
       "vardas_pavarde": "Audronė Stočkuvienė",
       "del_ko_kreiptis": ["tai žmogus, kuris koordinuoja visą gimnazijoje teikiamą pagalbą mokiniui, kad kiekvienas jaustųsi saugus, išgirstas, suprastas ir galėtų sėkmingai mokytis. Ji bendradarbiauja su mokytojais, psichologu, socialiniu pedagogu, specialiuoju pedagogu, karjeros specialistu ir visuomenės sveikatos specialistu, kad tau būtų suteikta reikiama pagalba.",
       "Kreipkis, jeigu:",
@@ -133,12 +139,10 @@
       "Kreipkis į pavaduotoją ugdymui, jeigu:",
       "• Jei esi I-II klasių mokinys ir tavo tvarkaraštyje yra netikslumų ar klaidų (pvz., pamoka „dingo“).",
       "• Turi klausimų apie pamokų lankymą, atsiskaitymus, vertinimą.",
-      "• Nori pasiaiškinti dėl įskaitų, kontrolinių, mokymo programų.",
       "• Dėl svarbių priežasčių reikia keisti klasę, dalyką, mokymosi formą.",
       "• Nori daugiau sužinoti apie brandos egzaminus arba pagrindinio ugdymo pasiekimų patikrinimą.",
       "• Tavo mokymasis vyksta namuose, nuotoliniu ar individualiu būdu ir kyla neaiškumų.",
-      "• Manei, kad buvai neteisingai įvertintas, bet mokytojas situacijos nepaaiškino.",
-      "• Nori prisidėti prie gimnazijos veiklos, projektų ar iniciatyvų – pvz., pasiūlyti idėją ugdymo tobulinimui."]
+      "• Manei, kad buvai neteisingai įvertintas, bet mokytojas situacijos nepaaiškino."]
     },
     {
       "id": "7",
@@ -148,7 +152,7 @@
     },
     {
       "id": "8",
-      "pareigos": "Būdėtojų patalpa",
+      "pareigos": "Budėtojų patalpa",
       "vardas_pavarde": "",
       "del_ko_kreiptis": [""]
     },
@@ -453,7 +457,7 @@
     {
       "id": "52",
       "pareigos": "Skaitykla",
-      "vardas_pavarde": "R. Kisylytė",
+      "vardas_pavarde": "R. Kiselytė",
       "del_ko_kreiptis": [""]
     },
     {
@@ -526,7 +530,7 @@
     {
       "id": "63",
       "pareigos": "Gamtos mokslų laboratorija",
-      "vardas_pavarde": "",
+      "vardas_pavarde": "L. Vipienė",
       "del_ko_kreiptis": [""]
     },
     {
@@ -621,14 +625,14 @@
     },
     {
       "id": "79",
-      "pareigos": "Chemijos kabinetas",
-      "vardas_pavarde": "Danutė Ramanauskienė",
+      "pareigos": "Chemijos laboratorija",
+      "vardas_pavarde": "D. Ramanauskienė / R. Valentienė",
       "del_ko_kreiptis": [""]
     },
     {
       "id": "80",
-      "pareigos": "",
-      "vardas_pavarde": "",
+      "pareigos": "Chemijos kabinetas",
+      "vardas_pavarde": "D. Ramanauskienė",
       "del_ko_kreiptis": [""]
     },
     {
